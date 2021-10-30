@@ -1,0 +1,14 @@
+stages:
+  -test
+
+pre-commit:
+  stage: test
+  before_script:
+    - echo "Install pre-commit package"
+    - python -m pip install pre-commit==2.15.0
+    - echo "Environment prepared"
+
+  script:
+    - echo "Running pre-commit hooks"
+    - pre-commit
+    - echo "Pre-commit hooks done"
