@@ -1,3 +1,5 @@
+image: python:3.8.5
+
 stages:
   -test
 
@@ -10,5 +12,5 @@ pre-commit:
 
   script:
     - echo "Running pre-commit hooks"
-    - pre-commit
+    - pre-commit run --files src/*
     - echo "Pre-commit hooks done"
